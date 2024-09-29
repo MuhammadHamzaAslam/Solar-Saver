@@ -11,32 +11,32 @@ const Navbar = () => {
 
   return (
     <nav className="text-white">
-      <div className="container mx-auto px-4 flex justify-between items-center h-16">
+      <div className="px-4 flex justify-between items-center h-14 mb-2">
         {/* Logo */}
         <img
           src="https://solarsaver.vercel.app/assets/logo-CeUqb7XY.png"
-          className="h-[80px] mt-5"
+          className="h-[65px] "
           alt="Logo"
         />
 
         {/* Links for large screens */}
         <div className="hidden lg:flex space-x-6">
-          <a href="#pricing" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#pricing" className="hover:text-blue-400 px-4 mt-1">
             Pricing
           </a>
-          <a href="#about" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#about" className="hover:text-blue-400 px-4 mt-1">
             About
           </a>
-          <a href="#tools" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#tools" className="hover:text-blue-400 px-4 mt-1">
             Tools
           </a>
-          <a href="#how-it-works" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#how-it-works" className="hover:text-blue-400 px-4 mt-1">
             How it Works
           </a>
-          <a href="#how-it-works" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#how-it-works" className="hover:text-blue-400 px-4 mt-1">
             Testinomials
           </a>
-          <a href="#faq" className="hover:text-blue-400 px-4 mt-4">
+          <a href="#faq" className="hover:text-blue-400 px-4 mt-1">
             FAQ
           </a>
         </div>
