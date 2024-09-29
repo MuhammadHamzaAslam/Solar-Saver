@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body{
+    background-color: #231F1B !important;
+}
+.abc{
+    font-family: 'Bebas Neue';
+}
+button{
+    transition: ease-in-out;
+    transition-delay: 1.5ms;
+}
