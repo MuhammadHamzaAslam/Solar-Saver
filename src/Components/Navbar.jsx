@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* Logo */}
         <img
           src="https://solarsaver.vercel.app/assets/logo-CeUqb7XY.png"
-          className="h-[65px] "
+          className="h-[65px] mt-4"
           alt="Logo"
         />
 

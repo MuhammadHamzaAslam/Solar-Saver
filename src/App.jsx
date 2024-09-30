@@ -5,6 +5,8 @@ import TransparentPricing from "./Components/TransparentPricing";
 import AboutUs from "./Components/AboutUs";
 import AiUtilization from "./Components/AiUtilization";
 import Tools from "./Components/Tools";
+import Equipment from "./Components/Equipment";
+import Map from "./Components/Map";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <AboutUs/>
       <AiUtilization/>
       <Tools/>
+      <Equipment/>
+      <Map/>
     </>
   );
 }
