@@ -1,4 +1,4 @@
-import React, { useEffect, useState  } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -63,8 +63,6 @@ const Map = () => {
 
       <div className="flex justify-center items-center mt-10">
         <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
           className={`transition-opacity duration-500 ${
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
