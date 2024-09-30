@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Button from "./Button";
 
 const Tools = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
   const Data = [
     {
       imgUrl: "https://solarsaver.vercel.app/assets/png1-CHwXHQYP.svg",
@@ -36,7 +44,7 @@ const Tools = () => {
   ];
   return (
     <div>
-      <div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <h1 className="text-8xl abc text-white text-center mt-32">
           <span className="text-[#ee8023] ">SOLAR</span> SAVER TOOLS
         </h1>
@@ -50,6 +58,8 @@ const Tools = () => {
           {Data.map((data, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-center"
               className="bg-[#1a1714] rounded-xl h-[200px] w-full sm:w-[48%] md:w-[48%] lg:w-[30%] m-4 p-4 px-6 text-white"
             >
               <div className="h-[70px] w-[70px] rounded-full mt-5 bg-[#ee8023] flex justify-center items-center">

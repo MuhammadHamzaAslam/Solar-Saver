@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Equipment = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
   const Data = [
     {
       title: "Panels",
@@ -17,7 +25,7 @@ const Equipment = () => {
   ];
   return (
     <div>
-      <div className="pt-10">
+      <div className="pt-10" data-aos="fade-right">
         <h1 className="text-8xl abc text-white text-center mt-32">
           <span className="text-[#ee8023]">best</span> Equipment in the industry
         </h1>
@@ -29,7 +37,7 @@ const Equipment = () => {
       <div className="mt-14 flex justify-center items-center flex-wrap container mx-auto gap-5">
         {
             Data.map((data , index)=>(
-                <div key={index} className="flex flex-col justify-center items-center bg-[#1a1714] rounded-3xl py-14 px-5 md:w-[40%] lg:w-[30%]  ">
+                <div data-aos="fade-down-right" key={index} className="flex flex-col justify-center items-center bg-[#1a1714] rounded-3xl py-14 px-5 md:w-[40%] lg:w-[30%]  ">
                     <div>
                         <img src="https://solarsaver.vercel.app/assets/home-png-CGsn3ztO.svg" className="h-[100px] " alt="" />
                     </div>

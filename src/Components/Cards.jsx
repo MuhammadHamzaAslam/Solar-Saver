@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
-
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 const Cards = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
   const data = [
     {
       type: "STANDARD",
@@ -28,30 +35,32 @@ const Cards = () => {
 
   return (
     <div className="flex justify-center items-center flex-wrap mt-10 pt-8">
-  {data.map((dataItem, index) => (
-    <div
-      key={index}
-      className="bg-[#1a1714] rounded-xl w-full  sm:w-[48%] md:w-[48%] lg:w-[30%] m-4 p-4 px-6 text-white"
-    >
-      <div className="h-[70px] w-[70px] rounded-full mt-5 bg-[#ee8023] flex justify-center items-center">
-        <img
-          src="https://solarsaver.vercel.app/assets/home-png-CGsn3ztO.svg"
-          alt=""
-          className="h-[40px] w-[40px]"
-        />
-      </div>
-      <h1 className="text-5xl mt-4 abc">
-        <span className="text-[#ee8023]">{dataItem.type}</span> {dataItem.text}
-      </h1>
-      <p className="mt-2 text-xl ">{dataItem.description}</p>
-      <p className="mt-2 text-lg font-bold">{dataItem.watt}</p>
-      <div className="mt-5">
-        <Button />
-      </div>
+      {data.map((dataItem, index) => (
+        <div
+          key={index}
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="bg-[#1a1714] rounded-xl w-full  sm:w-[48%] md:w-[48%] lg:w-[30%] m-4 p-4 px-6 text-white"
+        >
+          <div className="h-[70px] w-[70px] rounded-full mt-5 bg-[#ee8023] flex justify-center items-center">
+            <img
+              src="https://solarsaver.vercel.app/assets/home-png-CGsn3ztO.svg"
+              alt=""
+              className="h-[40px] w-[40px]"
+            />
+          </div>
+          <h1 className="text-5xl mt-4 abc">
+            <span className="text-[#ee8023]">{dataItem.type}</span>{" "}
+            {dataItem.text}
+          </h1>
+          <p className="mt-2 text-xl ">{dataItem.description}</p>
+          <p className="mt-2 text-lg font-bold">{dataItem.watt}</p>
+          <div className="mt-5">
+            <Button />
+          </div>
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-
   );
 };
 

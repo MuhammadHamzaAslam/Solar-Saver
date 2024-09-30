@@ -1,26 +1,47 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const AiUtilization = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
   return (
     <div>
       <section className="flex flex-wrap items-center p-6 mt-32 pt-10">
         <div className="w-full lg:w-[60%] p-4 ">
-
-          <div className="h-[130px] rounded lg:w-[107%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="h-[130px] rounded lg:w-[107%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4"
+          >
             <div className="text-right">
               <h1 className="block text-2xl text-white abc">System Size</h1>
               <p className="block text-md text-white">9.5 - 14.13 kWh*</p>
             </div>
           </div>
 
-          <div className="h-[130px] rounded lg:w-[80%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="h-[130px] rounded lg:w-[80%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4"
+          >
             <div className="text-right">
               <h1 className="block text-2xl text-white abc">Solar Panels</h1>
               <p className="block text-md text-white">34 - 43*</p>
             </div>
           </div>
 
-          <div className="h-[130px] rounded lg:w-[60%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="h-[130px] rounded lg:w-[60%] mb-20 bg-gradient-to-r from-[#be7d21]/0 to-[#be7d21] flex justify-end items-center p-4"
+          >
             <div className="text-right">
               <h1 className="block text-2xl text-white abc">CO2 Offset</h1>
               <p className="block text-md text-white">7.65 - 9.07*</p>
@@ -28,7 +49,7 @@ const AiUtilization = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-[40%]  p-4">
+        <div className="w-full lg:w-[40%]  p-4" data-aos="zoom-in-right">
           <h1 className="abc text-8xl text-white lg:mt-20">
             <span className="text-[#ee8023]">AI</span> Utilization
           </h1>
