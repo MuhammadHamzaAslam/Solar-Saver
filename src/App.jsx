@@ -11,6 +11,8 @@ import Testinomials from "./Components/Testinomials";
 import Questions from "./Components/FAQ";
 import ReadyToStart from "./Components/Start";
 import LastNavbar from "./Components/LastNavbar";
+import Footer from "./Components/Footer";
+import Developed from "./Components/Developed";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Questions />
       <ReadyToStart/>
       <LastNavbar/>
+      <Footer/>
+      <Developed/>
     </>
   );
 }

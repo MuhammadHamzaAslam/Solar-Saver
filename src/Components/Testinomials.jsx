@@ -1,7 +1,14 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
   const testimonialsData = [
     {
       img: "https://solarsaver.vercel.app/assets/joh-doe-CpqoclS1.webp",
