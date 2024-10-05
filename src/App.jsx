@@ -7,6 +7,7 @@ import AiUtilization from "./Components/AiUtilization";
 import Tools from "./Components/Tools";
 import Equipment from "./Components/Equipment";
 import Map from "./Components/Map";
+import Testinomials from "./Components/Testinomials";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Tools/>
       <Equipment/>
       <Map/>
+      <Testinomials/>
     </>
   );
 }
