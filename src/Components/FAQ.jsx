@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 
 const faqData = [
@@ -32,7 +34,12 @@ const Questions = () => {
   };
 
   return (
-    <div className="container mx-auto mt-10 p-4">
+    <div
+      className="container mx-auto mt-10 p-4"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+    >
       {faqData.map((faq, index) => (
         <div
           key={index}
